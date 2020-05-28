@@ -2,36 +2,28 @@ import React, {Component} from 'react';
 
 class Player extends Component{
 	
-
-handleForm(e){
+	handleForm(e){
 	e.preventDefault();
   this.props.player(e.target.player.value);
 }
  render()
-
-
 {
-
 	return(
    < form onSubmit={(e)=> this.handleForm(e)}>
    <lable>
-
-   Player X
+ Player X
    <input type="radio" name="player" value="X"/>
- 
-    </lable>
+ </lable>
 
    <lable>
 
    Player O
    <input type="radio" name="player" value="O"/>
- 
-    </lable>
+ </lable>
     <input type="submit" value="start"/>
    </form>
    )
 }
-
 }
 
 export default Player;
